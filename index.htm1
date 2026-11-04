@@ -2,156 +2,146 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#07152f">
 <title>Sila Store</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(160deg,#10264a,#07152f,#030b19);
+color:white;min-height:100vh;text-align:center
 }
-
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(160deg,#10264a,#07152f,#030b19);
-  color: white;
-  min-height: 100vh;
-  text-align: center;
+header{padding:45px 15px 20px}
+.logo{font-family:Georgia,serif;font-size:43px;letter-spacing:5px}
+.line{width:55px;height:1px;background:#c8a96b;margin:15px auto}
+.subtitle{color:#d5bd8a;letter-spacing:4px;font-size:11px}
+main{
+min-height:65vh;display:flex;flex-direction:column;
+align-items:center;justify-content:center;padding:20px
 }
-
-header {
-  padding: 45px 15px 20px;
+.small{color:#c8a96b;margin-bottom:15px;font-size:13px}
+h2{font-family:Georgia,serif;font-size:32px;font-weight:normal;line-height:1.6}
+h2 span{color:#e5d0a0}
+.whatsapp-circle{
+width:115px;height:115px;margin-top:30px;border-radius:50%;
+background:#25D366;display:flex;align-items:center;
+justify-content:center;font-size:57px;color:white;
+text-decoration:none;box-shadow:0 0 0 10px #25d36615
 }
-
-.logo {
-  font-family: Georgia,serif;
-  font-size: 43px;
-  letter-spacing: 5px;
-  font-weight: normal;
+.label{margin-top:20px;font-size:14px}
+footer{color:#888;font-size:11px;padding:25px}
+.bottom{position:fixed;bottom:15px;left:15px;right:15px}
+.button{
+display:block;background:#25D366;color:white;padding:18px;
+border-radius:14px;text-decoration:none;font-size:16px;font-weight:bold
 }
-
-.line {
-  width: 55px;
-  height: 1px;
-  background: #c8a96b;
-  margin: 15px auto;
+#cookie-banner{
+position:fixed;bottom:90px;left:15px;right:15px;
+background:#10264a;color:white;padding:18px;
+border:1px solid #c8a96b;border-radius:12px;
+text-align:center;z-index:9999;line-height:1.8
 }
-
-.subtitle {
-  color: #d5bd8a;
-  letter-spacing: 4px;
-  font-size: 11px;
+.cookie-btn{
+padding:11px 18px;border:0;border-radius:8px;
+margin:8px 4px;color:white;font-size:14px;cursor:pointer
 }
-
-main {
-  min-height: 65vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.small {
-  color: #c8a96b;
-  margin-bottom: 15px;
-  font-size: 13px;
-}
-
-h2 {
-  font-family: Georgia,serif;
-  font-size: 32px;
-  font-weight: normal;
-  line-height: 1.6;
-}
-
-h2 span {
-  color: #e5d0a0;
-}
-
-.whatsapp-circle {
-  width: 115px;
-  height: 115px;
-  margin-top: 30px;
-  border-radius: 50%;
-  background: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 57px;
-  color: white;
-  text-decoration: none;
-  box-shadow: 0 0 0 10px #25d36615;
-}
-
-.label {
-  margin-top: 20px;
-  font-size: 14px;
-}
-
-footer {
-  color: #888;
-  font-size: 11px;
-  padding: 25px;
-}
-
-.bottom {
-  position: fixed;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
-}
-
-.button {
-  display: block;
-  background: #25D366;
-  color: white;
-  padding: 18px;
-  border-radius: 14px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-}
-
+.accept{background:#25D366}
+.reject{background:#555}
 </style>
+
+<script>
+(function(w,d,t){
+  w.TiktokAnalyticsObject=t;
+  var ttq=w[t]=w[t]||[];
+  ttq.methods=["page","track","identify","instances","debug","on","off",
+  "once","ready","alias","group","enableCookie","disableCookie",
+  "holdConsent","revokeConsent","grantConsent"];
+
+  ttq.setAndDefer=function(t,e){
+    t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}
+  };
+
+  for(var i=0;i<ttq.methods.length;i++)
+    ttq.setAndDefer(ttq,ttq.methods[i]);
+
+  ttq.load=function(e,n){
+    var r="https://analytics.tiktok.com/i18n/pixel/events.js";
+    ttq._i=ttq._i||{};
+    ttq._i[e]=[];
+    ttq._i[e]._u=r;
+    ttq._t=ttq._t||{};
+    ttq._t[e]=+new Date;
+    ttq._o=ttq._o||{};
+    ttq._o[e]=n||{};
+    var s=d.createElement("script");
+    s.type="text/javascript";
+    s.async=true;
+    s.src=r+"?sdkid="+e+"&lib="+t;
+    var x=d.getElementsByTagName("script")[0];
+    x.parentNode.insertBefore(s,x);
+  };
+
+  w.startTikTokPixel=function(){
+    if(w.pixelStarted)return;
+    w.pixelStarted=true;
+    ttq.load('DBLREDJC77UFMFQA9FN0');
+    ttq.page();
+  };
+})(window,document,'ttq');
+
+function acceptMarketing(){
+  localStorage.setItem('marketing_consent','accepted');
+  window.startTikTokPixel();
+  document.getElementById('cookie-banner').style.display='none';
+}
+function rejectMarketing(){
+  localStorage.setItem('marketing_consent','rejected');
+  document.getElementById('cookie-banner').style.display='none';
+}
+window.addEventListener('DOMContentLoaded',function(){
+  if(localStorage.getItem('marketing_consent')==='accepted'){
+    window.startTikTokPixel();
+    document.getElementById('cookie-banner').style.display='none';
+  }else if(localStorage.getItem('marketing_consent')==='rejected'){
+    document.getElementById('cookie-banner').style.display='none';
+  }
+});
+</script>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Sila Store</div>
-  <div class="line"></div>
-  <div class="subtitle">ELEVATED EXPERIENCE</div>
+<div class="logo">Sila Store</div>
+<div class="line"></div>
+<div class="subtitle">ELEVATED EXPERIENCE</div>
 </header>
 
 <main>
-  <div class="small">تواصل مباشر</div>
+<div class="small">تواصل مباشر</div>
+<h2>اكتشف المزيد<br><span>وتواصل معنا مباشرة</span></h2>
 
-  <h2>
-    اكتشف المزيد<br>
-    <span>وتواصل معنا مباشرة</span>
-  </h2>
+<a class="whatsapp-circle"
+href="https://wa.me/972566569109"
+aria-label="واتساب">☎</a>
 
-  <a class="whatsapp-circle"
-     href="https://wa.me/972566569109"
-     aria-label="واتساب">
-     ☎
-  </a>
-
-  <div class="label">اضغط هنا</div>
+<div class="label">اضغط هنا</div>
 </main>
 
-<footer>
-  Sila Store · ALL RIGHTS RESERVED
-</footer>
+<footer>Sila Store · ALL RIGHTS RESERVED</footer>
 
 <div class="bottom">
-  <a class="button"
-     href="https://wa.me/972566569109">
-     ☎ راسلنا واتساب
-  </a>
+<a class="button" href="https://wa.me/972566569109">
+☎ راسلنا واتساب
+</a>
+</div>
+
+<div id="cookie-banner">
+<p>نستخدم ملفات التتبع التسويقية لقياس أداء الإعلانات. يمكنك الموافقة أو الرفض.</p>
+<button class="cookie-btn accept" onclick="acceptMarketing()">موافقة</button>
+<button class="cookie-btn reject" onclick="rejectMarketing()">رفض</button>
 </div>
 
 </body>
